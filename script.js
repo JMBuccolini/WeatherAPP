@@ -64,6 +64,8 @@ function getWeatherData() {
           showWeatherData(data);
           var categoryValue =data.current['weather'][0]['main'];
           document.body.setAttribute("category", categoryValue);
+          const div = document.querySelector("div.date-container").setAttribute("category",categoryValue)
+          const place = document.querySelector("div.time-zone").setAttribute("category",categoryValue)
         })
       });
     }
