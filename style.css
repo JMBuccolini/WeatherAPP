@@ -220,6 +220,7 @@ body[category="Rain"] {
 
   .place-container .search-bar{
     background:rgba(0, 0, 0, 0.5) ;
+    width: 235px;
   }
 
   .search-button{
