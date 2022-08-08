@@ -56,9 +56,10 @@ getWeatherData();
 const API_KEY = "fe41de2f36c68c34fa1a83d9eb4d10c9";
 function getWeatherData() {
   navigator.geolocation.getCurrentPosition((success) => {
+    console.log(success)
     let { latitude, longitude } = success.coords;
     fetch(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&lang=sp&appid=${API_KEY}`
       ).then(res=>res.json()).then(data=>{
         console.log(data)
           showWeatherData(data);

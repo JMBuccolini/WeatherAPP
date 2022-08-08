@@ -75,6 +75,33 @@ body[category="Rain"] {
   font-size: 30px;
 }
 
+.place-container .search-bar{
+  padding: 7px;
+  margin-top: 25px;
+  background:rgba(0, 0, 0, 0.2) ;
+  border-radius: 10px;
+  border: none;
+}
+.search-bar:focus {
+  outline: none !important;
+  border: none;
+  box-shadow: 0 0 10px #719ECE;
+}
+.search-button{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 50px;
+  height: 25px;
+  background:rgba(0, 0, 0, 0.2) ;
+  border-radius: 10px;
+  border: none;
+  font-size: 12px;
+  color: rgba(0,0,0,0.6);
+}
+.search-button:hover{
+  background: rgba(0, 0, 0, 0.5);
+}
+
 .place-container {
   text-align: end;
 }
@@ -179,13 +206,25 @@ body[category="Rain"] {
 }
 
 @media only screen and (max-width: 730px) {
-  .container {
+  body{
+    overflow-y: scroll;
+  }
+    .container {
     padding: 20px;
   }
   .future-forecast {
     justify-content: start;
     align-items: none;
     overflow-y: scroll;
+  }
+
+  .place-container .search-bar{
+    background:rgba(0, 0, 0, 0.5) ;
+  }
+
+  .search-button{
+    background:rgba(0, 0, 0, 0.5) ;
+    color: white;
   }
 
   .future-forecast .today {
